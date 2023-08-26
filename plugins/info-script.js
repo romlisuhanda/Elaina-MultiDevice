@@ -1,18 +1,24 @@
-//Credits Jangan Dihapus
-//Thanks To Papah-Chan
+import util from 'util'
 import fetch from 'node-fetch'
-var handler = async(m, { conn, text, usedPrefix, command }) => {
+import path from 'path'
 
-    let str = `*https://github.com/ImYanXiao/Elaina-MultiDevice*`
-    let waifu = await fetch('https://raw.githubusercontent.com/ArugaZ/grabbed-results/main/random/anime/waifu.txt')
-    let chen = await waifu.text()
-    let ran = chen.split('\n')
-    let yae = ran[Math.floor(Math.random() * ran.length)]
-    let thumb = await(await fetch(yae)).buffer()
-    await conn.reply(m.chat, str, m, global.fakeig) 
+let handler = async (m, { conn }) => {
+let vn = './media/AUD-20220708-WA0325.mp3'
+conn.sendFile(m.chat, vn, 'Gaboleh-gitu.mp3', null, fkontak, true, {
+type: 'audioMessage', 
+ptt: true , contextInfo: { showAdAttribution: true,
+         externalAdReply: { 
+             title: 'Nyari Apa Banh SC?',  
+             body: 'Engga ada banh mwehehe ><', 
+             description: '', 
+             mediaType: 2, 
+           thumbnail: await (await fetch('https://telegra.ph/file/a9a6907db67ca1a0c0877.jpg')).buffer(), 
+          mediaUrl: `https://youtu.be/35w7z9QFLwY` 
+         } 
+      } 
+   })
 }
-handler.help = ['sc', 'script']
-handler.tags = ['info', 'main']
-handler.command =  /^(script|sc)$/i
+handler.command = handler.help = ['sc']
+handler.tags = ['info']
 
 export default handler
