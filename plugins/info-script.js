@@ -3,8 +3,8 @@ import fetch from 'node-fetch'
 import path from 'path'
 
 let handler = async (m, { conn }) => {
-let vn = './media/AUD-20220708-WA0325.mp3'
-conn.sendFile(m.chat, vn, 'Gaboleh-gitu.mp3', null, fkontak, true, {
+let vn = './media/yntkts.mp3'
+conn.sendFile(m.chat, vn, 'yntkts.mp3', null, fkontak, true, {
 type: 'audioMessage', 
 ptt: true , contextInfo: { showAdAttribution: true,
          externalAdReply: { 
