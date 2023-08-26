@@ -358,7 +358,7 @@ const listMessage = {
     },
     message: {
     orderMessage: {
-    itemCount : 2022,
+    itemCount : 2023,
     status: 1,
     surface : 1,
     message: `Hai Kak ${name}!`, 
@@ -376,7 +376,7 @@ const listMessage = {
     },
     message: {
     orderMessage: {
-    itemCount : 2022,
+    itemCount : 2023,
     status: 1,
     surface : 1,
     message: '[❗] Memuat Menu ' + '...\n Sabar Ya Kak ^ω^', 
@@ -596,4 +596,4 @@ function timeimg() {
     imgloc = ('./media/elaina7.png')
   }
   return imgloc
-}
+       }
